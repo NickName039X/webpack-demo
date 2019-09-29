@@ -30,7 +30,7 @@ module.exports = {
         }),
 
 
-        // 通过指定 entry 配置中未用到的名称，此插件会自动将我们需要的内容提取到单独的包中
+        // 通过指定 entry 配置中未用到的名称，此插件会自动将我们需要的内容提取到单独的包中。比如runtime和manifest
         new webpack.optimize.CommonsChunkPlugin({
             name: 'manifest',
             minChunks: Infinity
