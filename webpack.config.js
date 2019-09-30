@@ -14,11 +14,12 @@ module.exports = {
     output: {
         //hash和chunkhash的区别，hash和构建相关，改动一个文件会导致其他hash也跟着改，实际上浪费了缓存。而chunkhash只和chunk有关
         filename: '[name].[chunkhash].js',
+        chunkFilename: '[name].[hash].js',//配置非入口的chunk在输出时的文件名称
         path: path.resolve(__dirname, 'dist')
     },
 
     // mode: 'production',  webpack3.x.x不支持该属性，我透。
-    
+
     plugins: [
 
         // 使vendor的hash不变化,推荐生产环境构建
