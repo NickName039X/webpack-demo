@@ -9,8 +9,17 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.2.0",
+    "file-loader": "^4.0.0",
+    "html-loader": "1.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^3.6.0"
+    "less": "^3.0.0",
+    "less-loader": "6.0.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.9.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +27,6 @@
     "build:chart": "webpack --profile --json > stats.json",
     "build:pro": "webpack --env.NODE_ENV=local --env.production --progress",
     "build:test": "webpack --env.NODE_ENV=local --env.development --progress"
-
   },
   "keywords": [],
   "author": "",

@@ -1,17 +1,11 @@
-import _ from 'lodash';
-import printMe from './print.js';
-// import printMe from './test2.js';
+import data from './data/name.json'
+// 结论：webpack能处理js/json
 
-function component() {
-  var element = document.createElement('div');
-  var btn = document.createElement('button');
-
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-  return element;
+import './index.less';
+import './second.css';
+import './assets/font/iconfont.css';
+function add (x, y) {
+  return x + y;
 }
-
-document.body.appendChild(component());
+console.log('data', data);
+console.log(add(1,2));

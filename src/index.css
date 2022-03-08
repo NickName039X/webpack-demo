@@ -1,0 +1,14 @@
+body {
+  margin: 10px !important;
+  background: lightblue;
+}
+.content {
+  background: url(assets/img/8516725.jpg);
+  background-size: contain;
+  width: 400px;
+  height: 300px;
+}
+.second {
+  width: 400px;
+  height: 300px;
+}
