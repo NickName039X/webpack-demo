@@ -52,5 +52,8 @@
       "not dead",
       "not op_mini all"
     ]
+  },
+  "eslintConfig":{
+    "extends": "airbnb-base"
   }
 }
