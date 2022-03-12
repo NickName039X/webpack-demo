@@ -11,3 +11,7 @@ function add(x, y) {
 }
 console.log('data', data);
 console.log(add(1, 2));
+
+const jian = () => {
+  return x - y;
+}
