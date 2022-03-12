@@ -114,6 +114,21 @@ const webpackConfig = {
           name: 'fonts/[contenthash:10].[ext]',
         },
       },
+      /**
+       * js兼容性处理 babel-loader @babel/core @babel/preset-env
+       * 1. 基本兼容性处理 --> @babel/preset-env
+       *    问题：只能转换基本语法，如promise不能转换。
+       */
+      {
+        test: /\.js$/i,
+        exclude: '/node_modules/',
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ]
+        }
+      }
     //   {
     //     test: /\.js$/i,
     //     exclude: '/node_modules/',
