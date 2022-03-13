@@ -86,62 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/assets/font/iconfont.css":
-/*!**************************************!*\
-  !*** ./src/assets/font/iconfont.css ***!
-  \**************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/assets/font/iconfont.css?");
-
-/***/ }),
-
-/***/ "./src/data/name.json":
-/*!****************************!*\
-  !*** ./src/data/name.json ***!
-  \****************************/
-/*! exports provided: name, age, default */
-/***/ (function(module) {
-
-eval("module.exports = JSON.parse(\"{\\\"name\\\":\\\"jack\\\",\\\"age\\\":18}\");\n\n//# sourceURL=webpack:///./src/data/name.json?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_name_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/name.json */ \"./src/data/name.json\");\nvar _data_name_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./data/name.json */ \"./src/data/name.json\", 1);\n/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.less */ \"./src/index.less\");\n/* harmony import */ var _second_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./second.css */ \"./src/second.css\");\n/* harmony import */ var _assets_font_iconfont_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/font/iconfont.css */ \"./src/assets/font/iconfont.css\");\n // 结论：webpack能处理js/json\n\n\n\n\nvar a = 1;\n\nfunction add(x, y) {\n  return x + y;\n}\n\nconsole.log('data', _data_name_json__WEBPACK_IMPORTED_MODULE_0__);\nconsole.log(add(1, 2));\n\nvar jian = function jian() {\n  return x - y;\n};\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/index.less":
-/*!************************!*\
-  !*** ./src/index.less ***!
-  \************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/index.less?");
-
-/***/ }),
-
-/***/ "./src/second.css":
-/*!************************!*\
-  !*** ./src/second.css ***!
-  \************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/second.css?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: .presets[0][2] must be a string, or undefined\\n    at assertPluginItem (D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\validation\\\\option-assertions.js:266:15)\\n    at D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\validation\\\\option-assertions.js:236:30\\n    at Array.forEach (<anonymous>)\\n    at assertPluginList (D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\validation\\\\option-assertions.js:236:9)\\n    at D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\validation\\\\options.js:118:5\\n    at Array.forEach (<anonymous>)\\n    at validateNested (D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\validation\\\\options.js:94:21)\\n    at validate (D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\validation\\\\options.js:85:10)\\n    at loadPrivatePartialConfig (D:\\\\my_code\\\\my-project\\\\webpack-demo\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\config\\\\partial.js:80:50)\\n    at loadPrivatePartialConfig.next (<anonymous>)\");\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

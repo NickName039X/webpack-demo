@@ -1,29 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link href="app.css" rel="stylesheet"></head>
-<script ></script>
-<body> 
-    <p>hello webpack</p> 
-    <div class="content">
-        日期
-    </div>
-    <img class="second" src="img/5b2dad46ad.jpg" alt="">
-    <span class="iconfont icon-icon-"></span>
-    <span class="iconfont icon-icon-1"></span>
-    <span class="iconfont icon-icon-2"></span>
-    <span class="iconfont icon-icon-3"></span>
-    <div class="box">
-        <span class="test">hello world</span>
-    </div>
-<script type="text/javascript" src="app.js"></script></body>
-</html>
-<style>
-    .test{
-        backface-visibility:hidden
-    }
-</style>
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/babel-loader/lib/index.js):
+  Error: .presets[0][2] must be a string, or undefined
+  
+  - option-assertions.js:266 assertPluginItem
+    [webpack-demo]/[@babel]/core/lib/config/validation/option-assertions.js:266:15
+  
+  - option-assertions.js:236 
+    [webpack-demo]/[@babel]/core/lib/config/validation/option-assertions.js:236:30
+  
+  - Array.forEach
+  
+  - option-assertions.js:236 assertPluginList
+    [webpack-demo]/[@babel]/core/lib/config/validation/option-assertions.js:236:9
+  
+  - options.js:118 
+    [webpack-demo]/[@babel]/core/lib/config/validation/options.js:118:5
+  
+  - Array.forEach
+  
+  - options.js:94 validateNested
+    [webpack-demo]/[@babel]/core/lib/config/validation/options.js:94:21
+  
+  - options.js:85 validate
+    [webpack-demo]/[@babel]/core/lib/config/validation/options.js:85:10
+  
+  - partial.js:80 loadPrivatePartialConfig
+    [webpack-demo]/[@babel]/core/lib/config/partial.js:80:50
+  
+  
+  - Error: .presets[0][2] must be a string, or undefined
+  
+  - compiler.js:79 
+    [webpack-demo]/[html-webpack-plugin]/lib/compiler.js:79:16
+  
+  - Compiler.js:343 
+    [webpack-demo]/[webpack]/lib/Compiler.js:343:11
+  
+  - Compiler.js:681 
+    [webpack-demo]/[webpack]/lib/Compiler.js:681:15
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [webpack-demo]/[tapable]/lib/Hook.js:154:20
+  
+  - Compiler.js:678 
+    [webpack-demo]/[webpack]/lib/Compiler.js:678:31
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [webpack-demo]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1423 
+    [webpack-demo]/[webpack]/lib/Compilation.js:1423:35
+  
+  
+</pre><script type="text/javascript" src="app.js"></script>

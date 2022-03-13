@@ -118,6 +118,8 @@ const webpackConfig = {
        * js兼容性处理 babel-loader @babel/core @babel/preset-env
        * 1. 基本兼容性处理 --> @babel/preset-env
        *    问题：只能转换基本语法，如promise不能转换。
+       * 2. 全部兼容性处理 -> @babel/polyfill
+       * 3. 部分兼容性处理 ——> core-js
        */
       {
         test: /\.js$/i,
@@ -125,19 +127,36 @@ const webpackConfig = {
         loader: 'babel-loader',
         options: {
           presets: [
-            ['@babel/preset-env', { targets: "defaults" }]
+            [
+              '@babel/preset-env',
+              { targets: "defaults" },
+              /**
+               * 注意 { targets: "defaults" }这句代码不能和下面的代码同时设置，否则会报错
+               */
+              // {
+              //   useBuiltIns: 'usage',
+              //   corejs: {
+              //     version: 3
+              //   },
+              //   //指定具体兼容性到哪个浏览器
+              //   targets: {
+              //     chrome: '60',
+              //     firefox: '50'
+              //   }
+              // }
+            ]
           ]
         }
       }
-    //   {
-    //     test: /\.js$/i,
-    //     exclude: '/node_modules/',
-    //     loader: 'eslint-loader',
-    //     options: {
-    //       fix: true,
-    //     },
+      //   {
+      //     test: /\.js$/i,
+      //     exclude: '/node_modules/',
+      //     loader: 'eslint-loader',
+      //     options: {
+      //       fix: true,
+      //     },
 
-    //   },
+      //   },
     ],
   },
   // 开发服务器特点，只会在内存中编译打包，不会有任何输出
