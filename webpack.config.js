@@ -20,7 +20,7 @@ const webpackConfig = {
   //     path: path.resolve(__dirname, 'dist')
   // },
 
-  mode: 'development',
+  mode: 'production',
   optimization: {
     splitChunks: {
       chunks: 'async',
@@ -174,6 +174,12 @@ const webpackConfig = {
       title: 'manage',
       // 复制该文件，并自动引入打包后的所有资源
       template: './src/index.html',
+
+      //注意minify只在生产模式下起作用
+      minify: {
+        collapseWhiteSpace: true,
+        removeComments: true,
+      }
     }),
 
     /**
