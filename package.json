@@ -38,6 +38,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "dev": "npx webpack-dev-server",
     "build:chart": "webpack --profile --json > stats.json",
     "build:pro": "webpack --env.NODE_ENV=local --env.production --progress",
     "build:test": "webpack --env.NODE_ENV=local --env.development --progress"

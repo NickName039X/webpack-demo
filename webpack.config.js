@@ -11,7 +11,7 @@ const webpackConfig = {
 
   // webpack在入口chunk 中，包含了某些样板(boilerplate)，特别是runtime和manifest
   entry: {
-    app: './src/index.js',
+    app: ['./src/index.js', './src/index.html'],
   },
   // output: {
   //     //hash和chunkhash的区别，hash和构建相关，改动一个文件会导致其他hash也跟着改，实际上浪费了缓存。而chunkhash只和chunk有关
@@ -20,7 +20,7 @@ const webpackConfig = {
   //     path: path.resolve(__dirname, 'dist')
   // },
 
-  mode: 'production',
+  mode: 'development',
   optimization: {
     splitChunks: {
       chunks: 'async',
@@ -147,16 +147,17 @@ const webpackConfig = {
             ]
           ]
         }
-      }
-      //   {
-      //     test: /\.js$/i,
-      //     exclude: '/node_modules/',
-      //     loader: 'eslint-loader',
-      //     options: {
-      //       fix: true,
-      //     },
-
+      },
+      // {
+      //   test: /\.js$/i,
+      //   exclude: '/node_modules/',
+      //   //保证eslint-loader优先执行
+      //   enforce: 'pre',
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     fix: true,
       //   },
+      // },
     ],
   },
   // 开发服务器特点，只会在内存中编译打包，不会有任何输出
@@ -166,6 +167,13 @@ const webpackConfig = {
     port: 3000,
     compress: true,
     open: true,
+    hot: true, //热模块替换
+    /**
+     * 样式文件 可以使用HMR功能，因为style-loader内部实现了
+     * JS文件 不能使用HMR功能，需要修改js代码
+     * HTML文件 不能使用HMR功能，同时会导致一个问题:html文件不能热更新了。解决：修改entry功能为数组，
+     * 将html文件push到entry里面
+     */
   },
   plugins: [
     // 防止index.html引用旧的js文件名字
