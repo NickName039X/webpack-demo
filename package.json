@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "speed-measure-webpack-plugin": "^1.5.0"
   },
   "devDependencies": {
